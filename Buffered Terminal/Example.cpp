@@ -23,7 +23,7 @@ int main() {
     Player player(0,0,"Mary");
     ren::Init();
     while (1) {
-        ren::Buffer('X', player.x, player.y);
+        ren::Buffer('X', player.x, player.y); 
         ren::Write();
 
         if (player.y == ren::Y)
