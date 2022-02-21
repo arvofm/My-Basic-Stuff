@@ -44,7 +44,7 @@ namespace ren {
             std::cerr<<"\n";
         }
     }
-    static void Del (const int& x, const int& y) {
+    static void Del (const int& x, const int& y) { 
         ind[x][y] = 0;
         mes[y*X+x] = ' ';
     }
