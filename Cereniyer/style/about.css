@@ -1,0 +1,33 @@
+body {
+    background-image: url("images/overlay.png"), linear-gradient(45deg, var(--green-bright) 20%, var(--brown) 90%);
+}
+
+.content img {
+    padding: 0.5rem;
+    width: 35%;
+    border-radius: 100%;
+    align-self: center;
+}
+
+.content p {
+    padding: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+    .content .content-title {
+        margin: 0;
+        width: 95%;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .content p {
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 1rem 0;
+    }
+}

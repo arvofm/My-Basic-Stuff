@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --purple: #CDB4DB;
+    --pink-bright: #FFC8DD;
+    --pink: #FFAFCC;
+    --blue-bright: #BDE0FE;
+    --blue: #A2D2FF;
+    --orange: #FFB4A2;
+    --orange-bright: #FFCDB2;
+    --red: #E5989B;
+    --red-dark: #B5838D;
+    --grey: #2A2D34;
+    --grey-bright: #32353C;
+    --white: #EDEDE9;
+    --brown: #D5BDAF;
+    --brown-bright: #E3D5CA;
+    --soft: #F5EBE0;
+    --green: #52796f;
+    --green-bright: #84a98c;
+    --yellow: #f6bd60;
+    --black: #1E2128;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--soft);
+    opacity: 0.9;
+    display: inline-block;
+}
+
+p {
+    color: var(--white);
+    opacity: 0.8;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("images/overlay.png"), linear-gradient(45deg, var(--pink) 20%, var(--blue) 90%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    line-height: 1.5;
+}
+
+*::selection {
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: var(--red-dark) !important;
+}
+
+.intro-blank {
+    width: inherit;
+    height: 6rem;
+}
+
+.intro {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: center;
+}
+
+.intro p {
+    color: white;
+    opacity: 1;
+}
+
+#cereniyer {
+    width: 12%;
+    align-self: center;
+    border-radius: 100%;
+}
+
+#title {
+    position: relative;
+    text-align: center;
+    align-self: center;
+    padding: 1rem;
+    bottom: 4rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    opacity: 1;
+}
+
+#starter {
+    text-align:center;
+    align-self: center;
+    position: relative;
+    bottom: 3rem;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.container {
+    width: 62%;
+}
+
+.navbar {
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 7rem;
+    border-radius: 10px;
+}
+
+.nav-subs {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.nav-item {
+    padding: 0.9rem 1.5rem;
+    margin: 0 5%;
+    border-radius: 0.7rem;
+    transition: background-color 150ms, color 150ms;
+}
+
+.nav-item:hover {
+    background-color: var(--grey-bright);
+    color: var(--blue);
+}
+
+#inside-nav {
+    background-color: var(--grey-bright);
+}
+
+#inside-nav:hover {
+    color: var(--pink);
+}
+
+.content {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--black);
+    position: relative;
+    bottom: 7px;
+    height: auto;
+}
+
+.content .content-section {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content hr {
+    color: var(--grey);
+    margin: 5rem;
+}
+
+.content .content-title {
+    padding: 2rem;
+    margin: 2rem;
+    border-bottom: 2px solid var(--blue);
+    align-self: center;
+    font-size: 2rem;
+}
+
+.content .content-blank {
+    width: 15%;
+}
+
+@media screen and (max-width: 1300px) and (orientation: portrait) {
+
+    #cereniyer {
+        width: 40%;
+    }
+
+    #title {
+        font-size: 3rem;
+    }
+
+    #starter {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait) {
+    
+    .intro .intro-blank {
+        height: 3rem;
+    }
+
+    .intro #title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+     .intro #starter {
+        font-size: 1.125rem;
+        bottom: 3.5rem;
+    }
+
+     .container .navbar .nav-blank {
+        display: none;
+    }
+      .nav-item {
+        padding: 0.5rem 0.5rem;           
+    }
+    
+    .content hr {
+        margin: 2rem;
+    }
+} 
+
