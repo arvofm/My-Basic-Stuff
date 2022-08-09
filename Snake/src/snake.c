@@ -9,7 +9,7 @@ int Random(int min, int max, int seed) {
 }
 
 snakePiece* GenerateGreaterSnake(snakePiece* p, int pieceCount, int growth) {
-    snakePiece* temp = (snakePiece*)malloc((pieceCount+growth) * sizeof(snakePiece));
+    snakePiece* temp = (snakePiece*)malloc((pieceCount+growth+1) * sizeof(snakePiece));
     for (int i = 0; i < pieceCount; i++)
         temp[i] = makeCopySnakePiece(&(p[i]));
     for (int i = pieceCount; i < pieceCount+growth; i++) {
@@ -111,17 +111,17 @@ snakePiece generateSnakePiece(const char piece, int x, int y, int direction) {
 }
 
 snakePiece makeCopySnakePiece(snakePiece* s1) {
-    snakePiece p;
-    p.piece = s1->piece;
-    p.direction = s1->direction;
-    p.rdirection = s1->rdirection;
-    p.x = s1->x;
-    p.y = s1->y;
-    p.rx = s1->rx;
-    p.ry = s1->ry;
-    p.x_ = s1->x_;
-    p.y_ = s1->y_;
-    return p;
+    snakePiece* p = (snakePiece*)malloc(sizeof(snakePiece));
+    p->piece = s1->piece;
+    p->direction = s1->direction;
+    p->rdirection = s1->rdirection;
+    p->x = s1->x;
+    p->y = s1->y;
+    p->rx = s1->rx;
+    p->ry = s1->ry;
+    p->x_ = s1->x_;
+    p->y_ = s1->y_;
+    return (*p);
 }
 
 void rotatePiece(snakePiece* p, int newDirection, int* rX, int* rY) {
