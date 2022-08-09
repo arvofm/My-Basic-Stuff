@@ -154,7 +154,7 @@ void BufferStats(int level, int score, int length) {
     for (i = 0; i < strLen("Snake Length: "); i++)
         Buffer("Snake Length: "[i], i + Xmin + 1, 6);
     hundreds = length / 100;
-    tens = length / 10;
+    tens = (length / 10) % 10;
     ones = length % 10;
     i += Xmin;
     Buffer(hundreds + '0', i++, 6);
