@@ -5,5 +5,6 @@
   <br>
   
   :::<a href="https://arvofm.github.io/My-Basic-Stuff/"> INDEX </a>:::
+  ::: [INDEX](https://arvofm.github.io/My-Basic-Stuff/) :::
   
 </p>
